@@ -209,7 +209,7 @@ body{
         </div>
         <br>
 
-        <a href="#">
+        <a href="{{ route('dashboard') }}">
             <button>
                 Ingresar
             </button>
