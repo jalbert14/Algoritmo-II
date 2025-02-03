@@ -191,34 +191,32 @@ body{
     <!--************************************** INICIO ******************************************-->
     <!--                           Formulario de inicio de sesión                               -->
     <!--****************************************************************************************-->
+    <form action="{{route('inicio')}}" method="post" class="inicio-secion">
+        @csrf
+            <h5>
+                Iniciar sesión
+            </h5>   
 
-    <section class="inicio-secion">
-    
-        <h5>
-            Iniciar sesión
-        </h5> 
+            <input class="controlador" type="text" name="user" value="" placeholder="Usuario"z>
+            </input>
 
-        <input class="controlador" type="text" name="user" value="" placeholder="Usuario"z>
-        </input>
+            <br><br>
 
-        <br><br>
+            <div class="container">
+                <input class="controlador" type="password" name="clave" value="" placeholder="Contraseña" id="pass">
+                </input> 
+            </div>
+            <br>
 
-        <div class="container">
-            <input class="controlador" type="password" name="clave" value="" placeholder="Contraseña" id="pass">
-            </input> 
-        </div>
-        <br>
-
-        <a href="{{ route('dashboard') }}">
-            <button>
-                Ingresar
-            </button>
-        </a>
-        <p>
-            <a href="{{ route('register') }}">Registrarse</a>
-        </p>
-    
-    </section>
+            <a href="{{ route('dashboard') }}">
+                <button>
+                    Ingresar
+                </button>
+            </a>
+            <p>
+                <a href="{{ route('register') }}">Registrarse</a>
+            </p>
+    </form>
     <script src="./js/login.js"></script>
 
 </body>

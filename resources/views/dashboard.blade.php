@@ -225,7 +225,7 @@ body {
         </center>
         <ul>
           <li>
-            <a href="{{ route('inicio') }}""
+            <a href="{{ route('inicio') }}"
               ><i class="fa-solid fa-home icono-personalizado"></i>Inicio</a
             >
           </li>

@@ -20,7 +20,6 @@ class CreateNotasTable extends Migration
             $table->foreignId('asignatura_id')->constrained('asignaturas')->onDelete('cascade');
             $table->decimal('nota', 5, 2);
             $table->timestamp('fecha')->useCurrent(); 
-            $table->timestamps(); 
         });
     }
 

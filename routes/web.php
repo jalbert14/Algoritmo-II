@@ -15,9 +15,13 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('login');
-})->name('inicio');;
+})->name('inicio');
 
 Route::get('/register', function () {
+    return view('registro');
+})->name('register');
+
+Route::post('/register', function () {
     return view('registro');
 })->name('register');
 
