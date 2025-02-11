@@ -191,7 +191,7 @@ body{
     <!--************************************** INICIO ******************************************-->
     <!--                           Formulario de inicio de sesión                               -->
     <!--****************************************************************************************-->
-    <form action="{{route('inicio')}}" method="post" class="inicio-secion">
+    <form action="{{route('inicio-sesion')}}" method="post" class="inicio-secion">
         @csrf
             <h5>
                 Iniciar sesión

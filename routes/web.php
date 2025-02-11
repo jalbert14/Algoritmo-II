@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use app\http\controllers\LoginController;
 
 /*
 |--------------------------------------------------------------------------
@@ -21,10 +22,21 @@ Route::get('/register', function () {
     return view('registro');
 })->name('register');
 
-Route::post('/register', function () {
-    return view('registro');
-})->name('register');
-
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->name('dashboard');
+
+/*
+|--------------------------------------------------------------------------
+| Web Routes - Controller
+|--------------------------------------------------------------------------
+|
+| W
+|
+*/
+
+Route::post('/validar-registro', [loginController::class, 'register'])->name('validar-registro');
+
+Route::post('/inicia-sesion', [loginController::class, 'login'])->name('inicia-sesion');
+
+Route::logout('/logout', [loginController::class, 'logout'])->name('logout');

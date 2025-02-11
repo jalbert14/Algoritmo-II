@@ -96,7 +96,8 @@
         .controlador {
             width: 100%;
             margin-bottom: 15px;
-            padding: 11px 10px;
+
+            padding: 11px 10px 15px;
             background: #514e4e;
             color: #f1ecf1;
             font-size: 14px;
@@ -138,18 +139,19 @@
             background-color: #f9b700;
         }
 
-        .inicio-secion p {
+
+        .register p {
             height: 10px;
             text-align: center;
         }
 
-        .inicio-secion a {
+        .register a {
             color: wheat;
             text-decoration: none;
             font-size: 14px;
         }
 
-        .inicio-secion a:hover {
+        .register a:hover {
             text-decoration: underline;
         }
 
@@ -181,6 +183,13 @@
             border-bottom: 1px solid;
             font-size: 20px;
         }
+
+        .registro{
+            text-decoration: none;
+            color: wheat;
+            text-decoration: none;
+            font-size: 14px;
+        }
     </style>
 
     <header class="header">
@@ -196,19 +205,22 @@
     <!--************************************** INICIO ******************************************-->
     <!--                              Formulario de Registro                                    -->
     <!--****************************************************************************************-->
-    <form action="{{ route('register') }}" method="post" class="register">
+    <form action="{{ route('validar-registro') }}" method="post" class="register">
         @csrf
 
             <h5>
                 Registrarse
             </h5>
 
-            <input class="controlador" type="text" name="user" value="" placeholder="Nombre"z>
+            <input class="controlador" type="text" name="user" value="" placeholder="Nombre">
 
-            <input class="controlador" type="email" name="user" value="" placeholder="E-mail"z>
+            <input class="controlador" type="email" name="user" value="" placeholder="E-mail">
 
             <div class="container">
                 <input class="controlador" type="password" name="clave" value="" placeholder="Contraseña">
+                </input>
+
+                <input class="controlador" type="password" name="clave" value="" placeholder="Confirmar contraseña">
                 </input>
             </div>
             <br>
@@ -216,9 +228,9 @@
                     Crear Cuenta
                 </button>
             <a href="{{ route('inicio') }}">
-                <button>
-                    Login
-                </button>
+                <p>
+                ¿Ya tienes cuenta?
+                </p>
             </a>
     </form>
     <!--************************************** FIN *********************************************-->

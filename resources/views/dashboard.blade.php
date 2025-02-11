@@ -268,7 +268,7 @@ body {
         </header>
         <section>
           <h1>Bienvenido a mi sitio web tonotos</h1>
-          <p>Aquí irá una triple hpta tabla</p>
+          <p>Aquí irá una tabla :v</p>
         </section>
       </main>
     </div>

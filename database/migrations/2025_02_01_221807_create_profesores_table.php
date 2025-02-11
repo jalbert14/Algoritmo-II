@@ -18,7 +18,8 @@ class CreateProfesoresTable extends Migration
             $table->string('nombre');
             $table->string('email')->unique();
             $table->string('contraseña');
-            $table->timestamps(); 
+            $table->rememberSSToken();
+            $table->timestamps();
         });
     }
 
